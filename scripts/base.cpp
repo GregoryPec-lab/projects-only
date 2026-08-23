@@ -16,16 +16,39 @@ struct people {
     void searchId(int &searchId){
         if(searchId == id) { cout << "Name: " << name << '\n' << "Age: " << age << '\n';}
     }
-    void searchId(int &searchName){
+    void searchName(int &searchName){
         if(searchName == name) { cout << "ID: " << id << '\n' << "Age: " << age << '\n';}
     }
-    void searchId(int &searchAge){
+    void searchAge(int &searchAge){
         if(searchAge == Age) { cout << "Name: " << name << '\n' << "ID: " << id << '\n';}
     }
 }
 
-int main(){
-    while(true){
+bool isAdmin(){
+    string bool;
+    string pass;
+    cout<<"Are you (G)uest or (A)dmin? Answer is ONLY G or A :";
+    cin>>bool;
+    if(bool == "A"){
+        cout<<"Password:"
+        cin>>pass;
+        if(pass == "123"){cout<<"Acces granted" << '\n';
+            return true;
+        }
+    }
+    if(bool == "G"){
+        return false;
+    }
+}
 
+int main(){
+    cout<< "C++ base" << '\n';
+    while(true){
+        if(isAdmin()){
+
+        }
+        else{
+
+        }
     }
 }
