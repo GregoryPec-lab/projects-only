@@ -1,0 +1,1 @@
+A simple place where I keep, save, and share my scripts. Nothing too fancy — just a collection of things I’ve made and worked on.
