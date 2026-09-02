@@ -103,7 +103,7 @@ void Find(vector<people> &Find){
     cout<<"===Find by===\n"
         <<"1.By id\n"
         <<"2.By name\n"
-        <<"3.By age";
+        <<"3.By age\n" << '\n';
     cin>>choise;
     switch (choise) {
        case 1:
@@ -133,7 +133,8 @@ int main(){
                 <<"1.Add person\n"
                 <<"2.Delete person\n"
                 <<"3.Find\n"
-                <<"4.Show All\n";
+                <<"4.Show All\n"
+                <<"5.Log off\n" << '\n';
             cin >> choise;
             switch (choise) {
                 case 1:
@@ -148,6 +149,9 @@ int main(){
                 case 4:
                     ShowAll(base);
                 break;
+                case 5:
+                    return main();
+                    break;
             }
         }
     }else{
@@ -155,7 +159,8 @@ int main(){
             cout<<"===DATABASE===\n"
                 <<"1.Add person\n"
                 <<"2.Find by ID\n"
-                <<"3.Show All\n";
+                <<"3.Show All\n"
+                <<"4.Log off\n" << '\n';
             cin >> choise;
             switch (choise) {
                 case 1:
@@ -167,6 +172,9 @@ int main(){
                 case 3:
                     ShowAll(base);
                 break;
+                case 4:
+                    return main();
+                    break;
             }
         }
     }
