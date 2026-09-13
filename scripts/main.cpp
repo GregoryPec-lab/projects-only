@@ -98,6 +98,24 @@ void FindByAge (vector<people> &Find){
         }
     }
 }
+void Find(vector<people> &Find){
+    int choise;
+    cout<<"===Find by===\n"
+        <<"1.By id\n"
+        <<"2.By name\n"
+        <<"3.By age\n" << '\n';
+    cin>>choise;
+    switch (choise) {
+       case 1:
+          FindByID(Find);
+          break;
+       case 2:
+           FindByName(Find);
+           break;
+       case 3:
+           FindByAge(Find);
+    }
+}
 void ShowAll (vector<people> &Show) {
     for(size_t i = 0; i < Show.size(); i++) {
         cout<<"===Person===" << '\n';
@@ -114,10 +132,9 @@ int main(){
             cout<<"===DATABASE===\n"
                 <<"1.Add person\n"
                 <<"2.Delete person\n"
-                <<"3.Find by ID\n"
-                <<"4.Find by NAME\n"
-                <<"5.Find by AGE\n"
-                <<"6.Show All\n";
+                <<"3.Find\n"
+                <<"4.Show All\n"
+                <<"5.Log off\n" << '\n';
             cin >> choise;
             switch (choise) {
                 case 1:
@@ -127,17 +144,14 @@ int main(){
                     DeletePerson(base);
                 break;
                 case 3:
-                    FindByID(base);
+                    Find(base);
                 break;
                 case 4:
-                    FindByName(base);
-                break;
-                case 5:
-                    FindByAge(base);
-                break;
-                case 6:
                     ShowAll(base);
                 break;
+                case 5:
+                    return main();
+                    break;
             }
         }
     }else{
@@ -145,7 +159,8 @@ int main(){
             cout<<"===DATABASE===\n"
                 <<"1.Add person\n"
                 <<"2.Find by ID\n"
-                <<"3.Show All\n";
+                <<"3.Show All\n"
+                <<"4.Log off\n" << '\n';
             cin >> choise;
             switch (choise) {
                 case 1:
@@ -157,6 +172,9 @@ int main(){
                 case 3:
                     ShowAll(base);
                 break;
+                case 4:
+                    return main();
+                    break;
             }
         }
     }
